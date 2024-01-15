@@ -14,7 +14,7 @@ public:
   int plaintext;
 };
 
-int MerkleHellmanEncrypt(vector<Public_Weights>PublicWeights, vector<Plaintext>xPlaintext)
+int KnapsackEncrypt(vector<Public_Weights>PublicWeights, vector<Plaintext>xPlaintext)
 {
   int ciphertext=0;
   unsigned size = PublicWeights.size();
@@ -58,7 +58,7 @@ int main()
               plaintext_vector[plaintext_vector.size()-1-i].plaintext = digit;
           }
       }
-      C = MerkleHellmanEncrypt(public_weights_vector, plaintext_vector);
+      C = KnapsackEncrypt(public_weights_vector, plaintext_vector);
       cout<<"\nThe ciphertext is - "<<C<<"\n";
   }
 }
